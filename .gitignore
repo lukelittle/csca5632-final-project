@@ -49,6 +49,8 @@ Thumbs.db
 
 # Project specific
 *.log
-*.csv
 *.joblib
 *.json
+
+# Generated files
+nba_pattern_analysis.pdf
