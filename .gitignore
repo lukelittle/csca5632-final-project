@@ -54,3 +54,10 @@ Thumbs.db
 
 # Generated files
 nba_pattern_analysis.pdf
+
+# Data and model files
+data/*
+!data/.gitkeep
+!data/*/.gitkeep
+models/*
+!models/.gitkeep

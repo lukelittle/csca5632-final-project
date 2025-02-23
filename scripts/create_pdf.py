@@ -17,6 +17,10 @@ def merge_notebooks(notebook_files):
     for fname in notebook_files:
         with open(fname, 'r', encoding='utf-8') as f:
             nb = nbformat.read(f, as_version=4)
+            # Ensure all code cells have outputs property
+            for cell in nb.cells:
+                if cell.cell_type == 'code' and 'outputs' not in cell:
+                    cell['outputs'] = []
             if merged is None:
                 merged = nb
             else:
